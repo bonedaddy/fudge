@@ -238,7 +238,7 @@ static void onwmresize(struct event_header *header, void *data)
     struct event_wmresize *wmresize = data;
 
     box_setsize(&size, wmresize->x, wmresize->y, wmresize->w, wmresize->h);
-    box_setsize(&content.size, size.x + 12, size.y + 12, size.w - 24, size.h - 24);
+    box_setsize(&content.size, size.x + 4, size.y + 4, size.w - 8, size.h - 8);
 
 }
 

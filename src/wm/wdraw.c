@@ -359,9 +359,9 @@ static void rendertext(struct element *element, void *data, unsigned int line)
         return;
 
     line = (line - text->size.y);
-    row = line / 24;
-    rowline = line % 24;
-    rowtop = row * 24;
+    row = line / 14;
+    rowline = line % 14;
+    rowtop = row * 14;
     rowtotal = ascii_count(string, stringcount, '\n') + 1;
 
     if (row >= rowtotal)
@@ -562,9 +562,9 @@ void main(void)
     unsigned char buffer[FUDGE_BSIZE];
     unsigned int count;
 
-    ctrl_setvideosettings(&settings, 1920, 1080, 32);
+    ctrl_setvideosettings(&settings, 320, 200, 8);
 
-    if (!call_walk(CALL_L0, CALL_PR, 18, "share/ter-118n.pcf"))
+    if (!call_walk(CALL_L0, CALL_PR, 18, "share/ter-112n.pcf"))
         return;
 
     call_open(CALL_L0);
