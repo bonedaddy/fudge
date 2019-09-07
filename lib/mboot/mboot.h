@@ -56,6 +56,19 @@ struct mboot_header_vbe
 
 };
 
+struct mboot_header_framebuffer
+{
+
+    unsigned int loaddr;
+    unsigned int hiaddr;
+    unsigned int pitch;
+    unsigned int width;
+    unsigned int height;
+    unsigned char bpp;
+    unsigned char type;
+
+};
+
 struct mboot_header
 {
 
@@ -72,6 +85,7 @@ struct mboot_header
     unsigned int name;
     unsigned int atable;
     struct mboot_header_vbe vbe;
+    struct mboot_header_framebuffer framebuffer;
 
 };
 
