@@ -1,6 +1,7 @@
 elfload < /mod/io.ko
 elfload < /mod/cpuid.ko
 elfload < /mod/msr.ko
+elfload < /mod/vbe.ko.0
 elfload < /mod/acpi.ko
 elfload < /mod/syse.ko
 elfload < /mod/pic.ko
@@ -13,9 +14,7 @@ elfload < /mod/ps2-keyboard.ko.0
 elfload < /mod/ps2-mouse.ko.0
 elfload < /mod/pit.ko
 elfload < /mod/rtc.ko.0
-elfload < /mod/bga.ko.0
 elfload < /mod/uart.ko
-elfload < /mod/vga.ko.0
 elfload < /mod/rtl8139.ko.0
 elfload < /mod/ide.ko
 elfload < /mod/ata.ko.0
