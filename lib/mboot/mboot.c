@@ -111,6 +111,23 @@ void mboot_setup(struct mboot_header *header, unsigned int magic)
 
     }
 
+    if (header->flags & MBOOT_FLAG_FRAMEBUFFER)
+    {
+
+        unsigned int *buffer = (unsigned int *)header->framebuffer.loaddr;
+        unsigned int i;
+
+        for (i = 0; i < header->framebuffer.width * header->framebuffer.height; i++)
+        {
+
+            buffer[i] = 0xFFFFFFFF;
+
+        }
+
+        for(;;);
+
+    }
+
     service_initbackend(&backend, 1000, read, write, map);
     arch_setup(&backend);
 
